@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gunn | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/15ce516255.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #fcfbf7;
+            text-align-last: center;
+        }
+
+        /*Nav Bar*/
+        .nav-bar-area {
+            padding: 19.2px 0;
+            min-height: 3.25rem;
+            display: flex;
+        }
+
+        .nav-bar-container {
+            margin: 0 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo>a {
+            height: 100%;
+        }
+
+        .nav-contact {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-contact>a {
+            border: 2px solid rgb(228, 38, 61);
+            border-radius: 50px;
+            color: rgb(228, 38, 61);
+            font-size: 1rem;
+            padding: 0.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /*Home Page*/
+
+        .home-page-area {
+            padding-top: 1rem;
+            color: black;
+            margin-bottom: 1rem;
+        }
+
+        .home-page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .home-page-container>div:first-child {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 3rem;
+            margin-bottom: 24px;
+            width: 100%;
+            background: linear-gradient(-45deg,
+                    #dfb79e,
+                    #dfb79e,
+                    #2b0413,
+                    #2b0413,
+                    #e25d52,
+                    #e25d52);
+            background-size: 300%;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: -2px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animated_text 6s ease-in-out infinite;
+        }
+
+        @keyframes animated_text {
+            0% {
+                background-position: 0px 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0px 50%;
+            }
+        }
+
+        .profile-picture {
+            width: 10rem;
+            height: 14rem;
+            margin: 25px 0;
+        }
+
+        .profile-picture>img {
+            border-radius: 20%;
+            width: 100%;
+            height: 100%;
+        }
+
+        /*First Essay*/
+        .essay-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .essay-container>div {
+            padding: 2rem 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #d66b63;
+            color: white;
+            text-align-last: center;
+            padding-bottom: 3rem;
+            width: 80%;
+        }
+
+        .essay-title {
+            border-radius: 20px 20px 0 0;
+            font-size: 2.5rem;
+            padding-bottom: 1.5rem;
+            text-align-last: center;
+        }
+
+        .essay-container>div:last-child {
+            padding-top: 0.5rem;
+            line-height: 1.5rem;
+            border-radius: 0 0 20px 20px;
+            text-align-last: center;
+        }
+
+        /*Skills*/
+
+        .skills-area {
+            width: 100%;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skills-container-list>div {
+            display: flex;
+            flex-wrap: wrap;
+            height: 6rem;
+            justify-content: space-around;
+        }
+
+        .skills-container-list>div>div,
+        .skills-container-list>div:first-child,
+        .cer-title,
+        .recent-work-area>div:first-child {
+            width: 20%;
+            height: 2rem;
+            box-sizing: border-box;
+            background-image: linear-gradient(315deg, #f0ecfc 0%, #cba0eb 57%);
+            border: 1px solid transparent;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            box-shadow: 8px 4px 4px 0 #e25d52, 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .skills-container-list>div:last-child>div {
+            background-image: linear-gradient(315deg, #f0ecfc 0%, #dedcfa 110%);
+            box-shadow: 8px 4px 4px 0 #a09af5, 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 1rem;
+        }
+
+        .skills-container-list>div:first-child,
+        .cer-title {
+            width: 30%;
+            height: 2rem;
+            position: relative;
+            left: 35%;
+            margin: 2rem 0;
+        }
+
+        .certification>div {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .certification>div>img {
+            border-radius: 10px;
+            width: 20%;
+            border: 1px solid #e25d52;
+            margin-top: 0.5rem;
+        }
+
+        /*My recent work*/
+
+        .recent-work-area {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recent-work-area>div:first-child {
+            width: 30%;
+            margin-bottom: 3rem;
+        }
+
+        .recent-work-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recent-work-container>div {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .recent-work-container>div:first-child {
+            background-image: url(https://media.istockphoto.com/vectors/futuristic-cloud-technology-background-integrated-digital-web-concept-vector-id1189773499?k=20&m=1189773499&s=612x612&w=0&h=3I6KRGL7AWwlk1ru5hgstsleLnRHkgZT93aMozboXkg=);
+            background-repeat: no-repeat;
+        }
+
+        .recent-work-container>div:nth-child(2) {
+            background-image: url(https://t3.ftcdn.net/jpg/01/71/91/78/360_F_171917878_323ub9wAXhFT91oeX30ROqmMl3sHSC1L.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .recent-work-container>div:nth-child(3) {
+            background-image: url(https://www.aigtechnologies.in/images/products/audit-management.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .recent-work-container>div>div {
+            width: 55%;
+        }
+
+        .job-container {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            height: auto;
+            border: 1px solid #e25d52;
+            margin-bottom: 1rem;
+            border-radius: 30px 30px 30px 30px;
+            font-weight: bold;
+            padding: 1rem;
+        }
+
+        .job-container>div>div:last-child {
+            margin-top: 1rem;
+            font-weight: normal;
+        }
+
+        .job-container>div>div:first-child {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e33985;
+        }
+
+        .job-container>div>div:nth-child(2) {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-container-list>div:first-child,
+        .cer-title,
+        .recent-work-title {
+            font-weight: bold;
+        }
+
+        /*contact*/
+        .contact-area {
+            margin-top: 2rem;
+        }
+
+        .social-icons {
+            padding: 30px;
+            background-color: #4e93f2;
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: #fff;
+            line-height: 30px;
+            font-size: 30px;
+            margin: 0 1.5rem;
+            text-decoration: none;
+        }
+
+        .social-icons a i {
+            line-height: 30px;
+            font-size: 2rem;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+
+        .social-icons a:hover i {
+            box-shadow: 0px 0px 150px #000000;
+            z-index: 2;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1.5);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1.5);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1.5);
+            transition: all 200ms ease-in;
+            transform: scale(1.5);
+        }
+
+        @media (max-width: 900px) {
+            .home-page-container>div:first-child {
+                font-size: 2.5rem;
+            }
+
+            .essay-title {
+                font-size: 2rem;
+            }
+
+            .skills-container-list>div,
+            .recent-work-title,
+            .job-container>div {
+                font-size: 0.8rem;
+            }
+
+            .job-container>div>div:first-child {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .home-page-container>div:first-child {
+                font-size: 2rem;
+            }
+
+            .essay-title {
+                font-size: 1.5rem;
+            }
+
+            .skills-container-list>div,
+            .recent-work-title,
+            .job-container>div {
+                font-size: 0.6rem;
+            }
+
+            .job-container>div>div:first-child {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="nav-bar-area">
+        <div class="nav-bar-container">
+            <div class="logo">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="55" height="55" viewBox="0 0 48 48"
+                        style="fill: #000000">
+                        <path fill="#f2494c"
+                            d="M36.466,28.216c-0.225,0.225-0.461,0.439-0.709,0.653c-0.191,0.157-0.394,0.315-0.596,0.461	c-0.225,0.169-0.45,0.326-0.686,0.472c-0.124,0.09-0.27,0.169-0.405,0.236c-0.18,0.112-0.349,0.214-0.54,0.304l-0.135,0.068	c-0.522,0.261-1.065,0.48-1.622,0.655c-0.175,0.055-0.353,0.109-0.538,0.155c-0.315,0.09-0.641,0.169-0.979,0.225	c-0.675,0.124-1.361,0.18-2.07,0.18h-3.943c-0.155-0.099-0.318-0.205-0.474-0.305c-0.317-0.699-0.608-1.348-1.41-2.26	c-0.146-0.18-0.337-0.382-0.551-0.596c-0.911-0.911-1.586-1.339-2.216-1.665c-0.169-0.09-0.337-0.169-0.506-0.248	c-0.27-0.135-0.54-0.259-0.833-0.428c-0.529-0.304-1.114-0.731-1.856-1.474c-1.159-1.159-1.53-1.935-1.924-2.711	C14.159,21.264,13.833,20.6,13,19.678V9.125C13,8.504,13.504,8,14.125,8h2.914c0.36,0.495,0.563,0.934,0.788,1.361	c0.36,0.788,0.731,1.541,1.89,2.7s1.935,1.53,2.722,1.913c0.765,0.371,1.541,0.754,2.689,1.901c1.159,1.159,1.53,1.935,1.924,2.711	c0.36,0.788,0.731,1.541,1.89,2.7c1.159,1.159,1.935,1.53,2.722,1.913c0.765,0.371,1.541,0.754,2.689,1.901	c1.159,1.159,1.53,1.935,1.924,2.711C36.331,27.946,36.399,28.081,36.466,28.216z">
+                        </path>
+                        <path fill="#db1a58" d="M13,8v32h8c1.105,0,2-0.895,2-2v-6h6c0,0,11-1,11-11S34,8,29,8H13z">
+                        </path>
+                        <path fill="#3231c7"
+                            d="M16.51,40H13v-2.34l0.034,0.034c1.159,1.159,1.935,1.53,2.722,1.912	C16.004,39.719,16.251,39.842,16.51,40z">
+                        </path>
+                        <path fill="#e4273e"
+                            d="M39.832,23.05c-0.068,0.236-0.351,5.743-7.712,8.232c-0.472-0.292-1.874-0.748-2.515-1.39	c-1.159-1.159-1.541-1.935-1.924-2.711c-0.236-0.484-0.472-0.968-0.889-1.541c-0.259-0.337-0.585-0.72-1.013-1.147	c-0.844-0.844-1.485-1.271-2.07-1.586c-0.214-0.124-0.427-0.236-0.641-0.337c-0.157-0.079-0.315-0.146-0.472-0.236	c-0.63-0.326-1.305-0.754-2.216-1.665c-1.159-1.159-1.541-1.935-1.924-2.711c-0.371-0.776-0.754-1.541-1.901-2.689	c-1.159-1.159-1.935-1.541-2.711-1.924c-0.281-0.124-0.551-0.259-0.844-0.439V8h10.62h0.001c1.202,1.219,1.996,1.611,2.789,2.001	c0.776,0.371,1.53,0.742,2.689,1.901s1.541,1.924,1.913,2.7c0.383,0.776,0.754,1.541,1.913,2.7c1.159,1.159,1.946,1.541,2.723,1.924	c0.765,0.382,1.541,0.754,2.678,1.901C38.954,21.759,39.54,22.589,39.832,23.05z">
+                        </path>
+                        <path fill="#f2494c"
+                            d="M36.679,28.76C33.947,31.097,31.905,32,29,32c-2.152,0-4.775-0.088-4.854-0.097	c-0.317-0.699-0.984-1.93-1.786-2.843c-0.146-0.18-0.337-0.382-0.551-0.596c-0.911-0.911-1.586-1.339-2.216-1.665	c-0.169-0.09-0.337-0.169-0.506-0.248c-0.27-0.135-0.54-0.259-0.833-0.428c-0.529-0.304-0.495-1.579-1.238-2.322	c-1.159-1.159-1.808-1.946-2.202-2.723C14.5,20.404,13.833,20.6,13,19.678V8h4.039c0.36,0.495,0.563,0.934,0.788,1.361	c0.36,0.788,0.731,1.541,1.89,2.7s1.935,1.53,2.722,1.913c0.765,0.371,1.541,0.754,2.689,1.901c1.159,1.159,1.53,1.935,1.924,2.711	c0.36,0.788,0.731,1.541,1.89,2.7c1.159,1.159,1.935,1.53,2.722,1.913c0.765,0.371,1.541,0.754,2.689,1.901	c1.159,1.159,1.53,1.935,1.924,2.711C36.331,27.946,36.612,28.625,36.679,28.76z">
+                        </path>
+                        <path fill="#b11e93"
+                            d="M23,38L23,38c0,1.105-0.895,2-2,2h-0.125H13V28.131c0.056,0.045-0.067-0.199,0-0.131	c0.259,0.259,0.82,0.775,1,1c0,0,0-0.011,0,0c0.653,0.776,0.811,1.415,1.104,2.022c0.382,0.765,0.754,1.553,1.913,2.7	c1.159,1.159,1.946,1.541,2.723,1.924c0.765,0.371,1.53,0.743,2.678,1.89C22.675,37.795,22.82,37.786,23,38z">
+                        </path>
+                        <path fill="#3231c7"
+                            d="M23,35.641v1.609V38c0,1.105-0.895,2-2,2h0c0,0,0.756-1.756-0.497-3.009	c-0.405-0.394-0.81-0.686-1.406-1.046c-0.585-0.36-1.226-0.821-1.733-1.327c-1.001-1.013-1.868-2.115-2.396-3.431	c-0.112-0.281-0.214-0.551-0.304-0.821c-0.135-0.349-0.259-0.675-0.428-1.001C14.09,29.082,13.203,28.259,13,28	c0.517,0.416,1.146,0.599,1.585,1.128c0.428,0.517,0.776,1.136,1.125,1.665c0.045,0.068,0.079,0.124,0.135,0.18	c0.675,0.945,1.609,1.71,2.565,2.329c0.045,0.023,0.079,0.056,0.124,0.068c0.472,0.292,0.945,0.495,1.496,0.686	c0.596,0.191,1.361,0.517,2.002,0.923C22.381,35.191,22.696,35.416,23,35.641z">
+                        </path>
+                        <path fill="#3231c7"
+                            d="M40,21c-0.011,0.236,0,2.317-0.635,3.942l-0.257-0.387l-0.641-0.833l-1.305-1.597	c-0.405-0.506-0.81-0.934-1.316-1.294c-0.484-0.382-1.193-0.742-1.845-1.271c-0.641-0.506-1.17-1.091-1.654-1.688	c-0.472-0.596-0.911-1.249-1.237-1.958c-0.214-0.472-0.36-0.934-0.529-1.373c-0.079-0.225-0.169-0.45-0.27-0.664	c-0.304-0.63-0.589-1.237-1.039-1.8c0.563,0.45,0.983,0.956,1.444,1.553c0.371,0.484,0.675,1.013,0.99,1.485	c0.079,0.112,0.146,0.214,0.225,0.315c0.754,0.956,1.789,1.811,2.824,2.385c0.101,0.056,0.191,0.101,0.281,0.146	c0.563,0.281,1.215,0.45,1.98,0.788c0.765,0.337,1.496,0.821,2.126,1.316C39.457,20.326,40,21,40,21z">
+                        </path>
+                        <path fill="#3231c7"
+                            d="M37.687,27.752c-0.13,0.17-1.285,1.309-2.267,2.03l-0.31-0.69c-0.23-0.59-0.38-0.99-0.67-1.44	c-0.26-0.44-0.63-0.9-0.99-1.3c-0.38-0.41-0.75-0.74-1.23-1.05c-0.47-0.3-1.11-0.65-1.63-1.11c-0.52-0.45-0.95-0.94-1.35-1.45	c-0.4-0.51-0.77-1.07-1.03-1.68c-0.14-0.35-0.26-0.69-0.38-1.01c-0.09-0.24-0.306-0.517-0.426-0.747	c-0.27-0.54-0.427-1.112-0.817-1.592c0.48,0.39,0.853,0.939,1.243,1.439c0.33,0.42,0.61,0.91,0.88,1.34	c0.05,0.08,0.09,0.15,0.14,0.22c0.66,0.93,1.63,1.73,2.59,2.29c0.05,0.03,0.1,0.06,0.16,0.08c0.43,0.23,0.89,0.38,1.45,0.6	c0.63,0.24,1.28,0.6,1.84,1.01c0.55,0.42,1.06,0.84,1.56,1.37C36.9,26.522,37.387,27.262,37.687,27.752z">
+                        </path>
+                        <path fill="#e4273e"
+                            d="M28.419,29.365c-1.02-1.02-1.7-1.36-2.39-1.69c-0.69-0.34-0.845-1.023-1.875-2.053 c-1.02-1.02-1.726-2.602-2.056-3.293c-0.34-0.69-0.416-1.098-1.446-2.128c-1.02-1.02-1.7-1.36-2.39-1.69 c-0.69-0.34-1.611-0.732-2.641-1.762c-1.02-1.02-1.562-1.639-1.892-2.329c-0.2-0.41-0.379-0.948-0.729-1.428V21 c0.49,0.35,0.879,0.523,1.289,0.733c0.65,0.3,1.091,0.899,1.991,1.769l0.03,0.03c0.06,0.04,0.13,0.11,0.2,0.18 c1.03,1.03,1.539,2.702,1.879,3.402c0.33,0.68,0.67,1.37,1.69,2.39c1.03,1.03,1.72,1.36,2.41,1.71 c0.27,0.12,0.523,0.565,0.803,0.725c0,0,1.1,0.065,2.708,0.06c0.313-0.001,1,0,1,0s2.166,0.049,2.999-0.029 C29.719,31.481,29.109,30.055,28.419,29.365z">
+                        </path>
+                        <path fill="#0288d1"
+                            d="M27,32h-4l-0.01,0.157c-0.157-0.112-0.337-0.225-0.529-0.337c-0.585-0.36-1.226-0.821-1.733-1.327	c-1.001-1.013-1.868-2.115-2.396-3.431c-0.079-0.191-0.146-0.382-0.214-0.563c-0.157-0.439-0.315-0.855-0.517-1.26	c-0.225-0.428-0.495-0.844-0.788-1.237l-0.034-0.034c-0.079-0.124-0.18-0.236-0.27-0.36c0.517,0.416,1.001,0.866,1.44,1.395	c0.428,0.517,0.776,1.136,1.125,1.665c0.112,0.18,0.248,0.349,0.382,0.506c0.653,0.799,1.474,1.451,2.318,2.002	c0.146,0.09,0.304,0.18,0.45,0.259c0.371,0.191,0.754,0.349,1.17,0.495c0.596,0.191,1.361,0.517,2.002,0.923	C25.96,31.201,27.14,32.063,27,32z">
+                        </path>
+                        <path fill="#0288d1"
+                            d="M33.286,31.079C32.533,31.63,30.252,32.031,29.99,32c-0.079-0.135-0.158-0.27-0.236-0.394	c-0.349-0.574-0.63-0.956-1.069-1.451c-0.405-0.472-0.821-0.855-1.339-1.204c-0.517-0.337-1.249-0.754-1.834-1.271	c-0.596-0.517-1.091-1.08-1.541-1.654c-0.461-0.585-0.877-1.237-1.17-1.924c-0.18-0.416-0.315-0.821-0.472-1.215	c-0.09-0.248-0.191-0.495-0.315-0.731c-0.292-0.619-0.697-1.193-1.136-1.744c0.551,0.439,1.069,0.934,1.519,1.496	c0.405,0.495,0.72,1.069,1.046,1.553c0.045,0.068,0.09,0.135,0.135,0.202c0.776,1.035,1.868,1.924,2.948,2.531	c0.011,0,0.011,0.011,0.022,0.011c0.551,0.304,1.103,0.472,1.834,0.754c0.731,0.281,1.474,0.72,2.104,1.181	c0.619,0.428,1.271,1.091,1.733,1.665C32.543,30.189,33.004,30.674,33.286,31.079z">
+                        </path>
+                        <path fill="#b11e93"
+                            d="M38.852,14.415c-0.96-2.195-2.23-3.842-4.295-5.009c0.585,1.057,0.856,1.924,2.352,3.42 C37.73,13.648,38.278,14.111,38.852,14.415z">
+                        </path>
+                        <path fill="#3231c7"
+                            d="M16.364,40H13v-2.474l0.032,0.036c1.11,1.225,1.854,1.617,2.609,2.022	C15.879,39.703,16.116,39.833,16.364,40z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-contact">
+                <a href="#"> Contact Me </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Home Page-->
+    <header class="home-page-area">
+        <div class="home-page-container">
+            <div>Hi, I'm Passavit Maicharoen</div>
+            <div class="profile-picture">
+                <img src="https://github.com/passavit1/Full-stack-developer/blob/main/PortFolio/641452%20copy.jpeg?raw=true"
+                    alt="" />
+            </div>
+        </div>
+        <img src="" alt="" />
+    </header>
+
+    <!--First Essay-->
+    <section class="essay-area">
+        <div class="essay-container">
+            <div class="essay-title">You can call me Gunn. Nice to meet you.</div>
+            <div>
+                I'm a Full-Stack Developer building Websites and Web Applications that
+                leads to the success of the overall product. I'm passionate about
+                learning new things, Especially Software Development.
+            </div>
+        </div>
+    </section>
+
+    <!--Skills-->
+    <section class="skills-area">
+        <div class="skills-container">
+            <div class="skills-container-list">
+                <div>Skills</div>
+                <div>
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>Bootstrap</div>
+                    <div>Javascript</div>
+                </div>
+            </div>
+            <div class="certification">
+                <div class="cer-title">Certifications</div>
+                <div>
+                    <img src="https://github.com/passavit1/Full-stack-developer/blob/main/PortFolio/Certificate%20for%20B.%20CSS%20%E0%B9%81%E0%B8%A5%E0%B8%B0%20HTML_page-0001.jpg?raw=true"
+                        alt="" />
+                    <img src="https://github.com/passavit1/Full-stack-developer/blob/main/PortFolio/Sololearn%20-%20python%20for%20biginner_page-0001.jpg?raw=true"
+                        alt="" />
+                    <img src="https://github.com/passavit1/Full-stack-developer/blob/main/PortFolio/Chula%20Learn%20Python%20Language%20Basics%20and%20Fundamental%20Data%20Processing.jpg?raw=true"
+                        alt="" />
+                    <img src="https://github.com/passavit1/Full-stack-developer/blob/main/PortFolio/Chula%20Learn%20Python%20Data%20Processing%20with%20NumPy%20and%20Matplotlib.jpg?raw=true"
+                        alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--My recent work-->
+    <section class="recent-work-area">
+        <div class="recent-work-title">My Career Path</div>
+        <div class="recent-work-container">
+            <div class="job-container">
+                <div>
+                    <div>Cloud Representative</div>
+                    <div>[SiS Distribution]</div>
+                    <div>Sep 22 - Current</div>
+                    <div>
+                        Responsible for help customers understand the value of cloud
+                        technologies and how it can help them better serve their
+                        customers.
+                    </div>
+                </div>
+            </div>
+            <div class="job-container">
+                <div>
+                    <div>Area Sale</div>
+                    <div>[POSSEFY GROUP COMPANY LIMITED]</div>
+                    <div>Oct 2018 - Aug 2022</div>
+                    <div>
+                        Responsible for the overall sales performance. Tracking,
+                        recording, and monitoring sales teams within a region.
+                    </div>
+                </div>
+            </div>
+            <div class="job-container">
+                <div>
+                    <div>Audit assistants</div>
+                    <div>[Dia International]</div>
+                    <div>Jan 2017 - Apr 2018</div>
+                    <div>
+                        Responsible in monitor and analyse financial reports under the
+                        guidance of senior auditors.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--My Project-->
+    <section class="project-area">
+        <div class="project-container"></div>
+    </section>
+
+    <!--My Contact-->
+    <section class="contact-area">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/passavit.gunn/" title="facebook" target="_blank">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/PassavitP" title="twitter" target="_blank">
+                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/pgunn_/" title="instagram" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/%E0%B8%A0%E0%B8%B2%E0%B8%AA%E0%B8%A7%E0%B8%B4%E0%B8%A8-%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D-b668421b7/"
+                title="linkedin" target="_blank">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
