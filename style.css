@@ -429,6 +429,9 @@ body {
   .job-container > div > div:first-child {
     font-size: 1.2rem;
   }
+  .contact div:nth-child(3) {
+    width: 70%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -449,6 +452,12 @@ body {
   .job-container > div > div:first-child {
     font-size: 1rem;
   }
+  .contact div:nth-child(3) {
+    width: 70%;
+  }
+  .certification > div > img:hover {
+    transform: scale(3);
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -462,7 +471,7 @@ body {
     font-size: 10px;
   }
   .certification > div > img:hover {
-    transform: scale(2.5);
+    transform: scale(3);
   }
 
   .personal_contact > h1 {
