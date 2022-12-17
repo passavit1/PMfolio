@@ -7,15 +7,6 @@ body {
   text-align-last: center;
 }
 
-@media only screen and (max-width: 480px) {
-  body {
-    font-size: 10px;
-  }
-  .certification > div > img:hover {
-    transform: scale(3);
-  }
-}
-
 /*Nav Bar*/
 
 .nav-bar-area {
@@ -180,6 +171,7 @@ body {
   align-items: flex-start;
   position: relative;
   left: 15%;
+  overflow: auto;
 }
 
 .contact div label {
@@ -417,6 +409,8 @@ body {
   transform: scale(1.5);
 }
 
+/* Responsive web design */
+
 @media (max-width: 900px) {
   .home-page-container > div:first-child {
     font-size: 2.5rem;
@@ -454,5 +448,34 @@ body {
 
   .job-container > div > div:first-child {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav-bar-container {
+    justify-content: center;
+  }
+  .element {
+    max-width: 470px;
+  }
+  body {
+    font-size: 10px;
+  }
+  .certification > div > img:hover {
+    transform: scale(2.5);
+  }
+
+  .personal_contact > h1 {
+    transform: scale(0.7);
+  }
+  .contact {
+    left: 10%;
+    /* display: inline-block; */
+  }
+  .contact div:nth-child(3) {
+    width: 70%;
+  }
+  .skills-container {
+    padding: 0 1rem;
   }
 }
