@@ -7,6 +7,15 @@ body {
   text-align-last: center;
 }
 
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 10px;
+  }
+  .certification > div > img:hover {
+    transform: scale(3);
+  }
+}
+
 /*Nav Bar*/
 
 .nav-bar-area {
